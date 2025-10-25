@@ -1,0 +1,18 @@
+name: NPCDialogue
+main: com.kim.NPCDialogue
+version: 1.2
+api-version: 1.21
+description: 支持点击选择和药水效果的NPC对话插件
+commands:
+  nd:
+    description: 与NPC对话或重载配置
+    usage: /<command> [id] 或 /<command> reload
+    permission: npcdialogue.use
+    permission-message: 你没有权限使用此命令
+permissions:
+  npcdialogue.use:
+    description: 允许使用NPC对话命令
+    default: true
+  npcdialogue.reload:
+    description: 允许重载配置
+    default: op
