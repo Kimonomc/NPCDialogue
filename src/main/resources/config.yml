@@ -1,0 +1,37 @@
+dialogue:
+  1:
+    dialog:
+      - 'SEND: &6欢迎回来！'
+      - 'SEND: &6你想做什么？'
+      - 'SEND: &6感谢你的选择！'
+
+    first-interaction:
+      - 'SEND: &a欢迎来到我的世界！'
+      - 'SEND: &6我是引导者'
+      - 'EFFECT: slowness, 1s, 1'
+      - 'WAIT: 2'
+      - 'SEND: &6我可以帮你选择职业'
+      - 'CHOICE: &6你想当医生还是老师？{1,2}'  # 确保选择格式正确
+      - 'SEND: &6选择后我会给你相应的能力'
+
+    # 选择1的文本和对话（确保配置完整）
+    choice1-text: 【医生】
+    choice1:
+      - 'SEND: &a你好，旅行者！'
+      - 'SEND: &6你选择了医生'
+      - 'SEND: &6接下来你会拥有医生的技能'
+      - 'SOUND: entity.villager.yes,0.7,0.5'
+      - 'COMMAND: give %player_name% golden_apple 3'
+      - 'EFFECT: regeneration, 10s, 2'  # 修复药水效果名称格式
+      - 'WAIT: 3'
+
+    # 选择2的文本和对话（确保配置完整）
+    choice2-text: 【老师】
+    choice2:
+      - 'SEND: &a欢迎你，知识的传播者！'
+      - 'SEND: &6你选择了老师'
+      - 'SEND: &6接下来你会拥有教学的能力'
+      - 'SOUND: entity.villager.yes,0.7,0.5'
+      - 'COMMAND: give %player_name% book 3'
+      - 'EFFECT: glow, 10s, 1'  # 修复药水效果名称为英文
+      - 'WAIT: 3'
